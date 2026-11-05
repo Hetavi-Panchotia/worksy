@@ -1,1 +1,1 @@
-export {};
+export { connectToDatabase, default } from "./mongodb";

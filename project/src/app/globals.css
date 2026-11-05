@@ -1,10 +1,12 @@
+@import "tailwindcss";
+
 :root {
   /* Warm Neutral Palette */
   --bg-page: #f8f7f4;
   --bg-surface: #ffffff;
   --bg-subtle: #f2efe9;
   --bg-hover: #ece9e2;
-  
+
   /* Text / Charcoal */
   --text-main: #222629;
   --text-muted: #666e75;
@@ -60,56 +62,29 @@ body {
   width: 6px;
   height: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #d4cfc5;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #b5b0a5;
 }
 
 /* Base Form Inputs */
-input, select, textarea {
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: 0.9375rem;
-  box-sizing: border-box;
 }
 
-/* Responsive sidebar utilities */
-.fixed {
-  position: fixed;
-}
-.inset-y-0 {
-  top: 0;
-  bottom: 0;
-}
-.left-0 {
-  left: 0;
-}
-.z-40 {
-  z-index: 40;
-}
-.z-50 {
-  z-index: 50;
-}
-.translate-x-0 {
-  transform: translateX(0);
-}
-.-translate-x-full {
-  transform: translateX(-100%);
-}
-
-@media (min-width: 768px) {
-  .md\:hidden {
-    display: none !important;
-  }
-  .md\:static {
-    position: static !important;
-  }
-  .md\:translate-x-0 {
-    transform: translateX(0) !important;
-  }
+/* Smooth Transition Utilities */
+.transition-all-fast {
+  transition: all 0.15s ease-in-out;
 }
