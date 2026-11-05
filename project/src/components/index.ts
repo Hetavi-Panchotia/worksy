@@ -1,1 +1,9 @@
-export {};
+export { default as Header } from "./Header";
+export { default as Sidebar } from "./Sidebar";
+export { default as AppShell } from "./AppShell";
+export { default as StatCard } from "./StatCard";
+export { default as ProjectCard } from "./ProjectCard";
+export { default as StatusBadge } from "./StatusBadge";
+export { default as Modal } from "./Modal";
+export { default as EmptyState } from "./EmptyState";
+export { default as LoadingSpinner } from "./LoadingSpinner";
