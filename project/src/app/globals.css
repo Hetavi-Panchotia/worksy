@@ -1,26 +1,115 @@
-@import "tailwindcss";
-
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Warm Neutral Palette */
+  --bg-page: #f8f7f4;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f2efe9;
+  --bg-hover: #ece9e2;
+  
+  /* Text / Charcoal */
+  --text-main: #222629;
+  --text-muted: #666e75;
+  --text-light: #949ca4;
+
+  /* Borders */
+  --border-subtle: #e6e2da;
+  --border-strong: #d2ccc2;
+
+  /* Muted Olive Brand Accent */
+  --brand-primary: #4d5d43;
+  --brand-primary-hover: #3f4d37;
+  --brand-light: #eef3ec;
+  --brand-border: #cad9c6;
+
+  /* Status Colors */
+  --status-green-bg: #ebf5ee;
+  --status-green-text: #22643a;
+  --status-green-border: #c8e4cf;
+
+  --status-blue-bg: #eef4fb;
+  --status-blue-text: #1d5cb0;
+  --status-blue-border: #cce0f6;
+
+  --status-yellow-bg: #fdf6e7;
+  --status-yellow-text: #965a08;
+  --status-yellow-border: #f8e4b8;
+
+  --status-red-bg: #fdf0ed;
+  --status-red-text: #a82a2a;
+  --status-red-border: #f7cac5;
+
+  --status-gray-bg: #f1f1ee;
+  --status-gray-text: #535961;
+  --status-gray-border: #dcdcd6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4cfc5;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b5b0a5;
+}
+
+/* Base Form Inputs */
+input, select, textarea {
+  font-family: inherit;
+  font-size: 0.9375rem;
+  box-sizing: border-box;
+}
+
+/* Responsive sidebar utilities */
+.fixed {
+  position: fixed;
+}
+.inset-y-0 {
+  top: 0;
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+.z-40 {
+  z-index: 40;
+}
+.z-50 {
+  z-index: 50;
+}
+.translate-x-0 {
+  transform: translateX(0);
+}
+.-translate-x-full {
+  transform: translateX(-100%);
+}
+
+@media (min-width: 768px) {
+  .md\:hidden {
+    display: none !important;
+  }
+  .md\:static {
+    position: static !important;
+  }
+  .md\:translate-x-0 {
+    transform: translateX(0) !important;
+  }
 }
